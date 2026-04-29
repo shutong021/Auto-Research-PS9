@@ -10,8 +10,8 @@ Autonomously discover better small CNN architectures and training configurations
 - `prepare.py` — Read-only infrastructure (data loading + evaluation).
 - `train.py` — The only file the AI agent is allowed to modify.
 - `results.tsv` — Full history of experiments.
-- `gemini_execution_transcript.txt` — **[NEW]** The full, unedited chat transcript showing the AI agent's reasoning and code generation.
-- `PS9_FashionMNIST.ipynb` — **[NEW]** A Google Colab notebook for easy reproduction.
+- `gemini_execution_transcript.txt` — The full, unedited chat transcript showing the AI agent's reasoning and code generation.
+- `PS9_FashionMNIST.ipynb` —  A Google Colab notebook for easy reproduction.
 - `requirements.txt` — Python dependencies.
 
 ## Best Result
