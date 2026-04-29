@@ -45,8 +45,8 @@ The human copies the updated code into train.py, runs the script, and feeds the 
 The agent evaluates the results against the simplicity criterion defined in program.md and decides whether to KEEP or REJECT the changes.
 
 ## Requirements
-Python 3.10+
-PyTorch + torchvision
+Python 3.10+,
+PyTorch + torchvision,
 GPU (Colab T4 recommended)
 
 ##### DOTE 6635 Artificial Intelligence for Business Research
