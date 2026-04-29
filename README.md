@@ -29,5 +29,5 @@ Python 3.10+
 PyTorch + torchvision
 GPU (Colab T4 recommended)
 
-### DOTE 6635 Artificial Intelligence for Business Research
-### Spring 2026
+##### DOTE 6635 Artificial Intelligence for Business Research
+##### Spring 2026
