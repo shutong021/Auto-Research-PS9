@@ -1,0 +1,7 @@
+experiment_id	timestamp	idea	val_accuracy	train_time_sec	param_count	best_so_far	kept	notes
+0	2026-04-29 06:01:19	Baseline SimpleCNN (2 conv + 2 fc)	91.38	158.56	421642	91.38	True	Initial baseline
+1	2026-04-29 06:09:34	Added Dropout(0.25) after first FC layer	91.67	156.12	421834	91.67	True	Testing Dropout for regularization to combat overfitting
+2	2026-04-29 06:15:36	Switched optimizer to AdamW with weight_decay=1e-2	91.6	155.07	421834	91.67	False	Testing decoupled weight decay for improved generalization
+3	2026-04-29 06:21:05	Added CosineAnnealingLR scheduler (T_max=15)	92.61	161.52	421834	92.61	True	Testing LR decay for better final convergence
+4	2026-04-29 06:25:55	Added 3rd Conv Block (128 channels), reduced params	92.56	161.69	241994	92.61	False	Deeper architecture but smaller parameter footprint due to spatial reduction before FC
+5	2026-04-29 06:31:09	Added Label Smoothing (0.1) to CrossEntropyLoss	92.5	169.41	421834	92.61	False	Reverted to Exp 4 architecture. Testing label smoothing for regularization.
