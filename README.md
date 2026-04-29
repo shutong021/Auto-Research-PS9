@@ -31,6 +31,7 @@ git clone https://github.com/shutong021/Auto-Research-PS9.git
 cd Auto-Research-PS9
 pip install -r requirements.txt
 python train.py
+```
 
 ## How the Autonomous Loop Works
 Instead of coding the model manually, the human orchestrator interacts with an LLM agent (Gemini) using the rules defined in program.md:
