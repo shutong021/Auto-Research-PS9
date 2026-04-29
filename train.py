@@ -11,11 +11,9 @@ class SimpleCNN(nn.Module):
         super().__init__()
         self.net = nn.Sequential(
             nn.Conv2d(1, 32, kernel_size=3, padding=1),
-            nn.BatchNorm2d(32),
             nn.ReLU(),
             nn.MaxPool2d(2),
             nn.Conv2d(32, 64, kernel_size=3, padding=1),
-            nn.BatchNorm2d(64),
             nn.ReLU(),
             nn.MaxPool2d(2),
             nn.Flatten(),
@@ -59,14 +57,15 @@ if __name__ == "__main__":
     print("Starting experiment...")
     val_acc, train_time, param_count, model = train_model()
     
+    # For first run, we consider it the baseline
     log_experiment(
-        idea="Added BatchNorm2d after Conv layers",
+        idea="Baseline SimpleCNN (2 conv + 2 fc)",
         val_acc=val_acc,
         train_time=train_time,
         param_count=param_count,
-        best_so_far=val_acc, # This will need logic to read previous best, but acting as baseline update for now
-        kept=True, 
-        notes="Testing Batch Normalization impact"
+        best_so_far=val_acc,
+        kept=True,
+        notes="Initial baseline"
     )
     
     print("Experiment completed.")
